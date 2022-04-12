@@ -1,9 +1,11 @@
 <script setup lang="ts">
 
+import DraggableItem from './components/draggableItem.vue';
+
 </script>
 
 <template>
-  <div>Hello world</div>
+  <DraggableItem />
 </template>
 
 <style lang="scss">
