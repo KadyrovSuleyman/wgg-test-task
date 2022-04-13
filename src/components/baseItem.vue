@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
 import { defineProps } from 'vue';
-import { FriendT } from '../../types';
-import { startDrag } from '../../dragAndDropHandlers';
+import { FriendT } from '../types';
+import { startDrag } from '../dragAndDropHandlers';
 
 const props = defineProps({
   data: FriendT,
@@ -16,7 +16,9 @@ const props = defineProps({
       'list-group-item',
       'w-75',
       'rounded-3',
-      'my-2'
+      'my-2',
+
+      'd-flex'
     ]"
     draggable="true"
     @dragstart="startDrag($event, data)"
@@ -29,7 +31,11 @@ const props = defineProps({
       :src="props.data.photo_50"
       :alt="`${props.data.name} avatar`"
     >
-    {{ props.data.name }}
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{ props.data.name }}</div>
+      {{ props.data.university_name }}
+    </div>
+
   </div>
 
 </template>

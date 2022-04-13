@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
 import { defineProps } from 'vue';
-import { FriendT } from '../../types';
-import BaseItem from '../baseItem/baseItem.vue';
+import { FriendT } from '../types';
+import BaseItem from './baseItem.vue';
 
 const props = defineProps({
   header: String,
@@ -84,7 +84,7 @@ const props = defineProps({
   }
 
   .list {
-    height: 200px;
+    height: 360px;
 
     background-color: var(--bs-pink);
   }

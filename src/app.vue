@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { ref, computed } from 'vue';
-import BaseList from './components/baseList/baseList.vue';
+import BaseList from './components/baseList.vue';
 import { FriendT } from './types';
 import { onDrop } from './dragAndDropHandlers';
 
@@ -47,7 +47,9 @@ const handleShowClick = () => {
               'btn-primary',
               'w-50',
             ]"
-            @click="handleLoginClick">
+            @click="handleLoginClick"
+            v-if="items.length === 0"
+            >
               login
             </button>
           </template>
@@ -66,7 +68,7 @@ const handleShowClick = () => {
               'w-50',
             ]"
             @click="handleShowClick">
-              show
+              export to console
             </button>
           </template>
         </BaseList>

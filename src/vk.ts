@@ -31,8 +31,9 @@ const vk = () => {
 
     getFriendList: () => new Promise((resolve: (item: ApiFriendI[]) => void) => {
       VK.Api.call('friends.get', {
-        user_id: userId, v: '5.134', fields: 'nickname, photo_50', order: 'random',
+        user_id: userId, v: '5.134', fields: 'photo_50, education', order: 'random',
       }, (r: ApiFriendListT) => {
+        console.log(r);
         resolve(r.response.items);
       });
     }),

@@ -9,6 +9,7 @@ const getFriendList = (list: Ref<FriendT[]>) => vk.login(() => {
       id: friend.id,
       name: `${friend.first_name} ${friend.last_name}`,
       photo_50: friend.photo_50,
+      university_name: friend.university_name,
       list: 'all',
     } as FriendT)))
     .then((computedList) => { list.value = computedList; });
