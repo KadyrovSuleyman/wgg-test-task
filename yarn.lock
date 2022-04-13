@@ -1658,6 +1658,11 @@
     "@typescript-eslint/types" "5.19.0"
     eslint-visitor-keys "^3.0.0"
 
+"@vkontakte/vk-bridge@^2.5.3":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.5.3.tgz#5c920746d97fa2bcdf0a91b9676953278f5b8568"
+  integrity sha512-VQaRXOixKh+hxnBPEgDqtVxiajxrZWWOlykpHsKD85qCNLW9Mrnd6GSbyK6xu7qYUSCT6n7yD6pJsm1mFRBdfQ==
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
   resolved "https://registry.npmmirror.com/@vue/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-1.2.1.tgz#31624a7a505fb14da1d58023725a4c5f270e6a81"
