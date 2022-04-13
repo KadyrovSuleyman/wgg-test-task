@@ -1,5 +1,8 @@
 # wgg
 
+## Task
+https://docs.google.com/document/d/1lNWxy5FtZ5RdYo2i5K8sGfLsOxMdC_WKZ6CatgLw9sE/edit
+
 ## Project setup
 ```
 yarn install
