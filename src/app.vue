@@ -28,7 +28,13 @@ const handleShowClick = () => {
 </script>
 
 <template>
-  <div class="container main-container rounded">
+  <div :class="[
+    'container',
+    'main-container',
+    'rounded',
+    'my-3',
+  ]">
+
     <div class="row h-100">
       <div class="col m-3 me-2">
         <BaseList
@@ -36,21 +42,37 @@ const handleShowClick = () => {
           :type="'all'" :header="'Friend list'"
         >
           <template v-slot:footer>
-            <button @click="handleLoginClick">login</button>
+            <button :class="[
+              'btn',
+              'btn-primary',
+              'w-50',
+            ]"
+            @click="handleLoginClick">
+              login
+            </button>
           </template>
         </BaseList>
       </div>
+
       <div class="col m-3 ms-2">
         <BaseList
           :list="selectedList" :onDrop="onDrop(items, 'selected')"
           :type="'selected'" :header="'Selected friends'"
         >
           <template v-slot:footer>
-            <button @click="handleShowClick">show</button>
+            <button :class="[
+              'btn',
+              'btn-info',
+              'w-50',
+            ]"
+            @click="handleShowClick">
+              show
+            </button>
           </template>
         </BaseList>
       </div>
     </div>
+
   </div>
 </template>
 

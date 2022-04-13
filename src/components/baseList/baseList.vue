@@ -25,7 +25,15 @@ const props = defineProps({
     'friends-block',
     'h-100',
   ]">
-    <div :class="'row header rounded-top'">
+    <div :class="[
+      'header',
+      'row',
+      'rounded-top',
+      'justify-content-center',
+      'align-content-center',
+      'text-uppercase',
+      'fs-5',
+    ]">
       {{ props.header }}
     </div>
 
@@ -33,6 +41,10 @@ const props = defineProps({
       :class="[
         'list',
         'row',
+        'flex-column',
+        'flex-nowrap',
+        'overflow-auto',
+        'list-group',
       ]"
       @drop="props.onDrop($event)"
       @dragover.prevent
@@ -41,7 +53,13 @@ const props = defineProps({
       <BaseItem v-for="item in props.list" :key="item.id" :data="item" />
     </div>
 
-    <div :class="'row footer rounded-bottom'">
+    <div :class="[
+      'footer',
+      'row',
+      'rounded-bottom',
+      'justify-content-center',
+      'align-content-center',
+    ]">
       <slot name="footer"></slot>
     </div>
 
@@ -50,20 +68,18 @@ const props = defineProps({
 </template>
 
 <style lang="scss">
-  @use 'styles' as *;
-
-  .header, .footer{
+  .header {
     height: 32px;
-    justify-content: center;
-    align-content: center;
+    background-color: white;
+  }
+
+  .footer {
+    height: 64px;
     background-color: white;
   }
 
   .list {
     height: 200px;
-    flex-direction: column;
-    flex-wrap: nowrap !important;
-    overflow: auto;
 
     background-color: rgba($color: blue, $alpha: 0.2);
   }

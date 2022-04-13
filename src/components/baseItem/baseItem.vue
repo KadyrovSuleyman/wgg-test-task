@@ -12,15 +12,13 @@ const props = defineProps({
 
 <template>
 
-      <div
-        draggable="true"
-        @dragstart="startDrag($event, data)"
-      >
-        {{ props.data.name }}
-      </div>
+  <div :class="[
+      'list-group-item',
+    ]"
+    draggable="true"
+    @dragstart="startDrag($event, data)"
+  >
+    {{ props.data.name }}
+  </div>
 
 </template>
-
-<style lang="scss">
-
-</style>
