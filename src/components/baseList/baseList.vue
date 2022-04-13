@@ -31,8 +31,8 @@ const props = defineProps({
 
     <div
       :class="[
-        'row',
         'list',
+        'row',
       ]"
       @drop="props.onDrop($event)"
       @dragover.prevent
@@ -62,6 +62,9 @@ const props = defineProps({
   .list {
     height: 200px;
     flex-direction: column;
+    flex-wrap: nowrap !important;
+    overflow: auto;
+
     background-color: rgba($color: blue, $alpha: 0.2);
   }
 </style>
