@@ -5,19 +5,24 @@ import BaseList from './components/baseList/baseList.vue';
 import { FriendT } from './types';
 import { onDrop } from './dragAndDropHandlers';
 
-import setFriendList from './buttonHandlers';
+import getFriendList from './getFriendList';
 
 const items = ref<FriendT[]>([]);
 
-const listOne = computed(() => items.value.filter((item) => item.list === 'all'));
-const listTwo = computed(() => items.value.filter((item) => item.list === 'selected'));
+const allList = computed(() => items.value.filter((item) => item.list === 'all'));
+const selectedList = computed(() => items.value.filter((item) => item.list === 'selected'));
 
 const handleLoginClick = () => {
-  setFriendList(items);
+  getFriendList(items);
 };
 
 const handleShowClick = () => {
-  console.log(listTwo.value);
+  const resultList = selectedList.value.map((item) => ({
+    id: item.id,
+    name: item.name,
+  }));
+
+  console.log(resultList);
 };
 
 </script>
@@ -26,14 +31,20 @@ const handleShowClick = () => {
   <div class="container main-container rounded">
     <div class="row h-100">
       <div class="col m-3 me-2">
-        <BaseList :list="listOne" :onDrop="onDrop(items, 'all')" :type="'all'" :header="'Friend list'">
+        <BaseList
+          :list="allList" :onDrop="onDrop(items, 'all')"
+          :type="'all'" :header="'Friend list'"
+        >
           <template v-slot:footer>
             <button @click="handleLoginClick">login</button>
           </template>
         </BaseList>
       </div>
       <div class="col m-3 ms-2">
-        <BaseList :list="listTwo" :onDrop="onDrop(items, 'selected')" :type="'selected'" :header="'Selected friends'">
+        <BaseList
+          :list="selectedList" :onDrop="onDrop(items, 'selected')"
+          :type="'selected'" :header="'Selected friends'"
+        >
           <template v-slot:footer>
             <button @click="handleShowClick">show</button>
           </template>
@@ -45,8 +56,4 @@ const handleShowClick = () => {
 
 <style lang="scss">
   @use 'styles' as *;
-
-  // .main-container {
-  //   height: 400px;
-  // }
 </style>

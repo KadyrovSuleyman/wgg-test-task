@@ -16,7 +16,7 @@ const props = defineProps({
         draggable="true"
         @dragstart="startDrag($event, data)"
       >
-        {{ props.data.name }} {{ props.data.list }}
+        {{ props.data.name }}
       </div>
 
 </template>
