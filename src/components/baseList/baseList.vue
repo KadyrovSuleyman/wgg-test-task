@@ -40,11 +40,16 @@ const props = defineProps({
     <div
       :class="[
         'list',
+
         'row',
         'flex-column',
         'flex-nowrap',
+        'align-items-center',
+
         'overflow-auto',
         'list-group',
+
+        'rounded-0',
       ]"
       @drop="props.onDrop($event)"
       @dragover.prevent
@@ -69,7 +74,7 @@ const props = defineProps({
 
 <style lang="scss">
   .header {
-    height: 32px;
+    height: 48px;
     background-color: white;
   }
 
@@ -81,6 +86,10 @@ const props = defineProps({
   .list {
     height: 200px;
 
-    background-color: rgba($color: blue, $alpha: 0.2);
+    background-color: var(--bs-pink);
   }
+
+  // .list::-webkit-scrollbar {
+  //   display: none;
+  // }
 </style>

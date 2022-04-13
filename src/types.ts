@@ -2,6 +2,7 @@
 export type FriendT = {
   id: number,
   name: string,
+  photo_50?: string,
   list: string,
 };
 

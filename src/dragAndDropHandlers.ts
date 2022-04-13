@@ -13,6 +13,10 @@ export const onDrop = (list: FriendT[], listName: string) => (evt: DragEvent) =>
     return;
   }
   friend.list = listName;
+
+  const target = evt.target as HTMLElement;
+  const listDiv = target.classList.contains('list') ? target : target.parentElement || target;
+  listDiv.scrollTop = listDiv.scrollHeight;
 };
 
 export const startDrag = (evt: DragEvent, friend: FriendT) => {

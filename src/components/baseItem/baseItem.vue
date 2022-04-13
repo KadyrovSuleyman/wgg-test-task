@@ -14,10 +14,21 @@ const props = defineProps({
 
   <div :class="[
       'list-group-item',
+      'w-75',
+      'rounded-3',
+      'my-2'
     ]"
     draggable="true"
     @dragstart="startDrag($event, data)"
   >
+    <img :class="[
+        'rounded-circle',
+        'border',
+        'me-2',
+      ]"
+      :src="props.data.photo_50"
+      :alt="`${props.data.name} avatar`"
+    >
     {{ props.data.name }}
   </div>
 

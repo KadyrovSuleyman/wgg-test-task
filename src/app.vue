@@ -77,5 +77,11 @@ const handleShowClick = () => {
 </template>
 
 <style lang="scss">
-  @use 'styles' as *;
+  body {
+    background-color: var(--bs-yellow) !important;
+  }
+
+  .main-container {
+    background-color: var(--bs-orange);
+  }
 </style>
