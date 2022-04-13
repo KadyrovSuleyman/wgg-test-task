@@ -1,0 +1,51 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+body {
+  background-color: $blue-200 !important;
+}
+
+.main-container {
+  background-color: $purple-700;
+}
+
+
+.header {
+  height: 48px;
+  background-color: $purple-200;
+}
+
+.footer {
+  height: 64px;
+  background-color: $purple-200;
+}
+
+.list {
+  height: 360px;
+
+  background-color: $purple-400;
+}
+
+.btn-export {
+  background-color: $indigo-600 !important;
+  color: $white !important;
+}
+.btn-export:hover {
+  background-color: $indigo-900 !important;
+}
+
+.btn-login {
+  background-color: $indigo-600 !important;
+  color: $white !important;
+}
+.btn-login:hover {
+  background-color: $indigo-900 !important;
+}
+
+input {
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-overflow: ellipsis;
+}

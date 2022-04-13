@@ -33,7 +33,6 @@ const vk = () => {
       VK.Api.call('friends.get', {
         user_id: userId, v: '5.134', fields: 'photo_50, education', order: 'random',
       }, (r: ApiFriendListT) => {
-        console.log(r);
         resolve(r.response.items);
       });
     }),

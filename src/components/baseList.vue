@@ -71,25 +71,3 @@ const props = defineProps({
   </div>
 
 </template>
-
-<style lang="scss">
-  .header {
-    height: 48px;
-    background-color: white;
-  }
-
-  .footer {
-    height: 64px;
-    background-color: white;
-  }
-
-  .list {
-    height: 360px;
-
-    background-color: var(--bs-pink);
-  }
-
-  // .list::-webkit-scrollbar {
-  //   display: none;
-  // }
-</style>

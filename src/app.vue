@@ -16,7 +16,7 @@ const handleLoginClick = () => {
   getFriendList(items);
 };
 
-const handleShowClick = () => {
+const handleExportClick = () => {
   const resultList = selectedList.value.map((item) => ({
     id: item.id,
     name: item.name,
@@ -44,13 +44,24 @@ const handleShowClick = () => {
           <template v-slot:footer>
             <button :class="[
               'btn',
-              'btn-primary',
+              'btn-login',
               'w-50',
             ]"
             @click="handleLoginClick"
             v-if="items.length === 0"
             >
-              login
+              <div class="container p-0">
+                <div :class="[
+                    'row',
+                    'p-0',
+                    'justify-content-center',
+                    'align-items-center',
+                  ]"
+                >
+                  <div :class="'img vk-logo p-0 me-2'" />
+                  login
+                </div>
+              </div>
             </button>
           </template>
         </BaseList>
@@ -64,10 +75,10 @@ const handleShowClick = () => {
           <template v-slot:footer>
             <button :class="[
               'btn',
-              'btn-info',
+              'btn-export',
               'w-50',
             ]"
-            @click="handleShowClick">
+            @click="handleExportClick">
               export to console
             </button>
           </template>
@@ -79,11 +90,13 @@ const handleShowClick = () => {
 </template>
 
 <style lang="scss">
-  body {
-    background-color: var(--bs-yellow) !important;
-  }
+  @use 'styles' as *;
 
-  .main-container {
-    background-color: var(--bs-orange);
+  .vk-logo {
+    background-image: url(/src/static/VK_Monochrome_Compact_Logo.svg) !important;
+    width: 32px !important;
+    height: 32px !important;
+
+    background-size: cover;
   }
 </style>

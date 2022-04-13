@@ -31,9 +31,11 @@ const props = defineProps({
       :src="props.data.photo_50"
       :alt="`${props.data.name} avatar`"
     >
-    <div class="ms-2 me-auto">
-      <div class="fw-bold">{{ props.data.name }}</div>
-      {{ props.data.university_name }}
+    <div class="ms-2 w-100">
+      <div :class="'fw-bold'">
+        {{ props.data.name }}
+      </div>
+      <input disabled :value="props.data.university_name" :class="'text-reset w-100'"/>
     </div>
 
   </div>
