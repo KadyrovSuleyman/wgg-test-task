@@ -1,32 +1,31 @@
-# wgg
+# WGG
+Тестовое задание для компании "WGG"
 
-## Task
+## Задание
 https://docs.google.com/document/d/1lNWxy5FtZ5RdYo2i5K8sGfLsOxMdC_WKZ6CatgLw9sE/edit
 
-## Project setup
+1. Авторизация через VK
+2. Подтягивание списка друзей
+3. Drag&drop перетаскивание из одного списка в другой
+4. Кнопка сохранить с выводом в консоль массива друзей из второго списка
+
+Стек: HTML, CSS - tailwind/bootstrap, JS - Vue
+Дизайн интерфейсов на свое усмотрение
+
+## Ссылка на деплой
+https://wgg-test-task.netlify.app/
+
+## Установка проекта
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Сборка и хот-релоад для разработки
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
+### Юнит-тестирование
 ```
 yarn test:unit
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
